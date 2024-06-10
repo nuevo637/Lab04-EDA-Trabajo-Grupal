@@ -7,10 +7,10 @@ public class FirstPart {
     System.out.println("INGRESE SU PALABRA EN MAYUSCULAS:");
     String palabra = sc.next();
     BST<Integer> arbol = new BST<>();
-        for (char c : palabra.toCharArray()) {
-            arbol.insert((int)c);
-        }
-        
+    for (char c : palabra.toCharArray()) {
+        arbol.insert((int)c);
+    }
+
     //OUTPUT
     System.out.println(arbol.inOrder());
     System.out.println(arbol.toASCII());

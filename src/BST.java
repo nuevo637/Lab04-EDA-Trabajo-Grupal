@@ -66,10 +66,11 @@ public class BST<E extends Comparable<E>> {
   @SuppressWarnings("unchecked")
   public E[] son(E x){
     Node<E> parent = searchNode(root, x);
-    if(parent == null) return null;
-    E[] res = (E[]) new Object[2];
-    res[0] = parent.left.data;
-    res[1] = parent.right.data;
+    if(parent == null) 
+      return null;
+    E[] res = (E[]) new Comparable[2];
+    res[0] = parent.left != null ? parent.left.data : null;
+    res[1] = parent.right != null ? parent.right.data : null;
     return res;
   }
 
