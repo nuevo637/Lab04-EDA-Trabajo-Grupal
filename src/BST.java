@@ -112,10 +112,19 @@ public class BST<E extends Comparable<E>> {
     return inOrderNode(root);
   }
 
+  public String toASCII() {
+    return toASCIINode(root);
+  }
+
   protected String inOrderNode(Node<E> actual){
     if(actual == null) return "";
     return inOrderNode(actual.left) + " " + actual.data + " " + inOrderNode(actual.right);
   }
+
+  protected String toASCIINode(Node<E> actual) {
+    if (actual == null) return "";
+    return toASCIINode(actual.left) + " " + (char)(int)actual.data  + " " + toASCIINode(actual.right);
+}
 
 public void display(){
   System.setProperty("org.graphstream.ui", "swing");
